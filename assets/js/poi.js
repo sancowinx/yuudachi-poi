@@ -46,7 +46,12 @@ button.onmouseup = function(){
 };
 
 
-
+/*typical pc browser: onkey- events*/
+button.onkeydown = function(e){
+	if(e.keyCode == 13){
+		poi_count = 0;
+	}
+};
 
 
 /* touch based*/
