@@ -25,10 +25,10 @@
 
 <footer class="bg-black padding-topbottom fixed position-bottom">
 	<div class="container">
-		<p class="text-center"> THIS MINDLESS POI POI POI IS BROUGHT TO YOU BY <a href="https://github.com/sancowinx">THIS GUY</a>.<br/>
+		<p class="text-center"> THIS MINDLESS POI POI POI IS BROUGHT TO YOU BY <a href="https://github.com/sancowinx"><b>THIS GUY</b></a>.<br/>
 			DOES UPPERCASE make me more KAWAII?
 			<br/>
-			<a href="http://knowyourmeme.com/memes/poi-%E3%81%A3%E3%81%BD%E3%81%84">What the hell is `POI!`</a>
+			<a href="http://knowyourmeme.com/memes/poi-%E3%81%A3%E3%81%BD%E3%81%84"><b>What the hell is `POI!`</b></a>
 			<br/>
 			*Works on modern browser/smartphone except Internet Explorer
 		</p>
@@ -38,77 +38,6 @@
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-<script>
-	var button = document.getElementsByTagName('button')[0];
-	var yuudachi = document.getElementsByTagName('img')[0];
-	var poi = new Audio('assets/audio/poi-wav.wav');
-
-	/*touch events*/
-	button.addEventListener("touchstart", touchStart, false);
-	button.addEventListener("touchend", touchEnd, false);
-	button.addEventListener("touchcancel", touchCancel, false);
-
-	poi_count = 0;
-
-	/*typical pc browser: mouse events*/
-	button.onclick = function (e) {
-		e.preventDefault();
-
-		console.log(index.play ? "true" : "nope");
-		console.log("Latest playback frame: " + index.currentTime);
-
-		if (index.played) {
-			index.pause();
-			index.currentTime = 0;
-		}
-
-		poi_count++;
-		document.getElementById('counter').innerHTML = poi_count;
-		index.play();
-	};
-
-	button.onmousedown = function (){
-		yuudachi.src = "yuudachi-6.jpg";
-	};
-
-	button.onmouseup = function(){
-		yuudachi.src = "yuudachi-3.jpg";
-	};
-
-
-
-
-
-	/* touch based*/
-
-	function touchStart(e){
-		e.preventDefault();
-
-		console.log(index.play ? "true" : "nope");
-		console.log("Latest playback frame: " + index.currentTime);
-
-		if (index.played) {
-			index.pause();
-			index.currentTime = 0;
-		}
-
-		poi_count++;
-		document.getElementById('counter').innerHTML = poi_count;
-		index.play();
-		yuudachi.src = "yuudachi-6.jpg";
-	}
-	function touchEnd(e){
-		e.preventDefault();
-		yuudachi.src = "yuudachi-3.jpg";
-	}
-	function touchCancel(e){
-		/*touchcancel: a touch is interrupted (implementation specific).*/
-		e.preventDefault();
-		yuudachi.src = "yuudachi-3.jpg";
-	}
-
-
-</script>
-
+<script async src="assets/js/poi.js"></script>
 </body>
 </html>
