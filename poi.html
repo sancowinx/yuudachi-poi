@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>POI!</title>
+	<style>
+		body{
+			margin-left: auto;
+			margin-right: auto;
+		}
+	</style>
+</head>
+<body>
+<img src="poiiii.jpg" alt="POI!"/>
+<button>POI!</button>
+<button>FUCKING STOP!</button>
+<p>You poied: <span id="counter">0</span> POI!</p>
+<script>
+	var button = document.getElementsByTagName('button')[0];
+	var button1 = document.getElementsByTagName('button')[1];
+	var poi = new Audio('poi.mp3');
+	counter_span = 0;
+	button.addEventListener('click',incrementbyone);
+	button1.addEventListener('click',stopthepoi);
+
+	function stopthepoi(e){
+		e.preventDefault();
+		if (poi.play){
+			poi.pause();
+			poi.currentTime=0;
+			console.log("is poing?");
+			console.log(poi.play ? "true":"nope");
+		} else {
+			console.info("audio instance not poi");
+		}
+	}
+
+	function incrementbyone(e){
+		console.log(poi.play ? "true":"nope");
+		console.log("Latest playback frame: " + poi.currentTime);
+		if(poi.played){
+			poi.pause();
+			poi.currentTime = 0;
+		}
+		e.preventDefault();
+		counter_span++;
+		document.getElementById('counter').innerHTML = counter_span;
+		poi.play();
+	}
+
+</script>
+</body>
+</html>
