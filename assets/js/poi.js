@@ -48,9 +48,18 @@ button.onmouseup = function(){
 
 /*typical pc browser: onkey- events*/
 button.onkeydown = function(e){
-	if(e.keyCode == 13){
+	if(e.keyCode == 13) {
 		poi_count = 0;
+	}else{
+
+		yuudachi_3.style.display = "none";
+		yuudachi_6.style.display = "block";
 	}
+};
+
+button.onkeyup = function(e){
+		yuudachi_3.style.display = "block";
+		yuudachi_6.style.display = "none";
 };
 
 
