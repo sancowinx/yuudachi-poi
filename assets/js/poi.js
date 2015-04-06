@@ -9,15 +9,12 @@ yuudachi_6.style.display = "none";
 button.addEventListener("touchstart", touchStart, false);
 button.addEventListener("touchend", touchEnd, false);
 button.addEventListener("touchcancel", touchCancel, false);
-
+poi_tweet = 0;
 poi_count = 0;
 
 /*typical pc browser: mouse events*/
 button.onclick = function (e) {
 	e.preventDefault();
-
-	console.log(poi.play ? "true" : "nope");
-	console.log("Latest playback frame: " + poi.currentTime);
 
 	if (poi.played) {
 		poi.pause();
@@ -25,8 +22,11 @@ button.onclick = function (e) {
 	}
 
 	poi_count++;
+	poi_tweet = poi_count;
 	document.getElementById('counter').innerHTML = poi_count;
 	poi.play();
+	console.log("poi_tweet: " + poi_tweet);
+	console.log("Total poi: " + poi_count);
 };
 
 button.onmousedown = function (){
@@ -58,8 +58,8 @@ button.onkeydown = function(e){
 };
 
 button.onkeyup = function(e){
-		yuudachi_3.style.display = "block";
-		yuudachi_6.style.display = "none";
+	yuudachi_3.style.display = "block";
+	yuudachi_6.style.display = "none";
 };
 
 
@@ -67,9 +67,6 @@ button.onkeyup = function(e){
 
 function touchStart(e){
 	e.preventDefault();
-
-	console.log(poi.play ? "true" : "nope");
-	console.log("Latest playback frame: " + poi.currentTime);
 
 	if (poi.played) {
 		poi.pause();
@@ -111,3 +108,4 @@ function touchCancel(e){
 	yuudachi_6.style.display = "none";
 }
 
+document.getElementById('twitter-share-btn').setAttribute("data-text" , "I poied " + poi_tweet + " poi!" );
