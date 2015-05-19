@@ -55,12 +55,13 @@
 					<h3>Total poied: <span id="counter">0</span> POI!</h3>
 					<a href="http://knowyourmeme.com/memes/poi-%E3%81%A3%E3%81%BD%E3%81%84"><b>What the hell is `POI!`</b></a><br/><br/>
 
-					<a id="twitter-share-btn"
+<!-- 					<a id="twitter-share-btn"
 						class="twitter-share-button"
 					   href="https://twitter.com/share"
 					   data-count="horizontal">
 						Tweet
-					</a>
+					</a> -->
+          <button id="twitter-tweet" class="btn btn-default btn-primary btn-lg"><i class="fa fa-twitter"></i> Tweet</button>
 
 				</div>
 		</div>
@@ -82,16 +83,22 @@
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 <script async src="assets/js/poi.js"></script>
 <script>
-	window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};
-		if(d.getElementById(id))return t;
-		js=d.createElement(s);
-		js.id=id;
-		js.src="https://platform.twitter.com/widgets.js";
-		fjs.parentNode.insertBefore(js,fjs);
-		t._e=[];
-		t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));
-
-
+//   window.twttr = (function(d, s, id) {
+//   var js, fjs = d.getElementsByTagName(s)[0],
+//     t = window.twttr || {};
+//   if (d.getElementById(id)) return t;
+//   js = d.createElement(s);
+//   js.id = id;
+//   js.src = "https://platform.twitter.com/widgets.js";
+//   fjs.parentNode.insertBefore(js, fjs);
+ 
+//   t._e = [];
+//   t.ready = function(f) {
+//     t._e.push(f);
+//   };
+ 
+//   return t;
+// }(document, "script", "twitter-wjs"));
 </script>
 </body>
 </html>
