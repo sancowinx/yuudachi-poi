@@ -10,14 +10,14 @@ button.addEventListener("touchstart", touchStart, false);
 button.addEventListener("touchend", touchEnd, false);
 button.addEventListener("touchcancel", touchCancel, false);
 
+poi_tweet = 0;
 poi_count = 0;
+
+tweet_message = "I poied " + poi_tweet + " poi!";
 
 /*typical pc browser: mouse events*/
 button.onclick = function (e) {
 	e.preventDefault();
-
-	console.log(poi.play ? "true" : "nope");
-	console.log("Latest playback frame: " + poi.currentTime);
 
 	if (poi.played) {
 		poi.pause();
@@ -25,8 +25,11 @@ button.onclick = function (e) {
 	}
 
 	poi_count++;
+	poi_tweet = poi_count;
 	document.getElementById('counter').innerHTML = poi_count;
 	poi.play();
+	console.log("poi_tweet: " + poi_tweet);
+	console.log("Total poi: " + poi_count);
 };
 
 button.onmousedown = function (){
@@ -58,8 +61,8 @@ button.onkeydown = function(e){
 };
 
 button.onkeyup = function(e){
-		yuudachi_3.style.display = "block";
-		yuudachi_6.style.display = "none";
+	yuudachi_3.style.display = "block";
+	yuudachi_6.style.display = "none";
 };
 
 
@@ -67,9 +70,6 @@ button.onkeyup = function(e){
 
 function touchStart(e){
 	e.preventDefault();
-
-	console.log(poi.play ? "true" : "nope");
-	console.log("Latest playback frame: " + poi.currentTime);
 
 	if (poi.played) {
 		poi.pause();
@@ -88,6 +88,7 @@ function touchStart(e){
 	yuudachi_6.style.display = "block";
 
 }
+
 function touchEnd(e){
 	e.preventDefault();
 
@@ -99,6 +100,7 @@ function touchEnd(e){
 	yuudachi_6.style.display = "none";
 
 }
+
 function touchCancel(e){
 	/*touchcancel: a touch is interrupted (implementation specific).*/
 	e.preventDefault();
@@ -111,3 +113,14 @@ function touchCancel(e){
 	yuudachi_6.style.display = "none";
 }
 
+// https://twittercommunity.com/t/insert-dynamic-content-into-data-text-attribute/19598/6
+// document.getElementById('twitter-share-btn').setAttribute("data-text" , "I poied " + poi_tweet + " poi!" );
+
+//Twitter web Intent
+document.getElementById("twitter-tweet").addEventListener("click",function(e){
+  event.preventDefault();
+  window.open(
+    "https://twitter.com/intent/tweet?text=I%20poied%20"  + poi_tweet + "%20POI!",
+    "Tweet this"
+  );
+})
