@@ -1,7 +1,9 @@
-var button = document.getElementsByTagName('button')[0];
-var yuudachi_3 = document.getElementsByTagName('img')[0];
-var yuudachi_6 = document.getElementsByTagName('img')[1];
-var poi = new Audio('assets/audio/poi-wav.wav');
+button = document.getElementsByTagName('button')[0];
+yuudachi_3 = document.getElementsByTagName('img')[0];
+yuudachi_6 = document.getElementsByTagName('img')[1];
+
+// audio
+poi 		= new Audio('assets/audio/poi-wav.wav');
 
 yuudachi_6.style.display = "none";
 
@@ -123,4 +125,4 @@ document.getElementById("twitter-tweet").addEventListener("click",function(e){
     "https://twitter.com/intent/tweet?text=I%20poied%20"  + poi_tweet + "%20POI!",
     "Tweet this"
   );
-})
+});
