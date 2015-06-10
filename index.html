@@ -48,11 +48,13 @@
       <img src="assets/img/yuudachi-6.jpg" alt="POI!" class="img-responsive"/>
       <br/>
       <div class="text-center">
-        <p>Poi timer: </p>
+        <!--<p>Poi timer: </p>-->
         <button class="btn btn-default btn-success btn-lg">POI! ポイ－！</button>
         <h3>Total poied: <span id="counter">0</span> POI!</h3>
         <a href="http://knowyourmeme.com/memes/poi-%E3%81%A3%E3%81%BD%E3%81%84"><b>What the hell is `POI!`</b></a><br/><br/>
         <button id="twitter-tweet" class="btn btn-default btn-primary btn-lg"><i class="fa fa-twitter"></i> Tweet</button>
+
+        <!-- Start, Stop Bgm-->
       </div>
     </div>
   </div>
@@ -62,8 +64,8 @@
 <footer class="bg-black padding-topbottom fixed position-bottom">
   <div class="container">
     <p class="text-center">THIS POINTLESS POI IS MADE BY <a href="https://github.com/sancowinx"><b>THIS GUY</b></a>.
-        <br/>
-        *Works on modern browser/smartphone except Internet Explorer
+    <br/>
+    *Works on modern browser/smartphone except Internet Explorer
     </p>
   </div>
 </footer>
@@ -71,5 +73,19 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 <script async src="assets/js/poi.js"></script>
+<script>
+    (function(){
+      bgm = new Audio("assets/audio/poi-ost-trimmed.wav");
+      // hurr durr does it loop?
+        bgm.loop = true;
+//        bgm.loop = true;
+        bgm.play();
+        console.log("loop?: " + bgm.loop);
+
+
+      // IMMA FIRIN' MAH RECURSIVE HURRDURR!
+      //arguments.callee();
+    })();
+</script>
 </body>
 </html>
