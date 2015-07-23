@@ -1,0 +1,19 @@
+{
+  "name": "yuudachi-poi-a-counter",
+  "version": "1.0.0",
+  "description": "Yuudachi Poi spammer",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sancowinx/yuudachi-poi-a-counter.git"
+  },
+  "author": "sancowinx",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sancowinx/yuudachi-poi-a-counter/issues"
+  },
+  "homepage": "https://github.com/sancowinx/yuudachi-poi-a-counter#readme",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    
+  }
+}
