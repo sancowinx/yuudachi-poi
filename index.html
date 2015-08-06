@@ -29,16 +29,17 @@
   <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
   <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
 
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-61221399-2', 'auto');
-      ga('send', 'pageview');
-    </script>
+    ga('create', 'UA-61221399-2', 'auto');
+    ga('send', 'pageview');
+  </script>
 </head>
+
 <body>
 <div class="container">
   <div class="row">
@@ -51,10 +52,14 @@
         <!--<p>Poi timer: </p>-->
         <button class="btn btn-default btn-success btn-lg">POI! ポイ－！</button>
         <h3>Total poied: <span id="counter">0</span> POI!</h3>
-        <a href="http://knowyourmeme.com/memes/poi-%E3%81%A3%E3%81%BD%E3%81%84"><b>What the hell is `POI!`</b></a><br/><br/>
+        <a href="http://knowyourmeme.com/memes/poi-%E3%81%A3%E3%81%BD%E3%81%84"><b>FYI, POI!</b></a><br/><br/>
         <button id="twitter-tweet" class="btn btn-default btn-primary btn-lg"><i class="fa fa-twitter"></i> Tweet</button>
+      </div>
+      <br/>
+      <div class="text-center">
+        <button id="button-restartmusic" class="btn btn-info btn-lg">Give me some POI music</button>
 
-        <!-- Start, Stop Bgm-->
+        <button id="button-stopmusic" class="btn btn-danger btn-lg">STOP THE FUCKING MUSIC!</button>
       </div>
     </div>
   </div>
@@ -65,27 +70,20 @@
   <div class="container">
     <p class="text-center">THIS POINTLESS POI IS MADE BY <a href="https://github.com/sancowinx"><b>THIS GUY</b></a>.
     <br/>
-    *Works on modern browser/smartphone except Internet Explorer
+    *Works on modern browser/smartphone except Internet Explorer. Safari will suffers some Audio lag.
     </p>
   </div>
 </footer>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-<script async src="assets/js/poi.js"></script>
+<script async src="assets/js/poi_v2.js"></script>
 <script>
-    (function(){
-      bgm = new Audio("assets/audio/poi-ost-trimmed.wav");
-      // hurr durr does it loop?
-        bgm.loop = true;
-//        bgm.loop = true;
-        bgm.play();
-        console.log("loop?: " + bgm.loop);
-
-
-      // IMMA FIRIN' MAH RECURSIVE HURRDURR!
-      //arguments.callee();
-    })();
+  (function(){
+    bgm = new Audio("assets/audio/poi-ost-trimmed.wav");
+      bgm.loop = true;
+      bgm.play();
+  })();
 </script>
 </body>
 </html>
