@@ -14,6 +14,9 @@
   "homepage": "https://github.com/sancowinx/yuudachi-poi-a-counter#readme",
   "devDependencies": {
     "grunt": "^0.4.5",
-    
+    "grunt-contrib-concat":"*",
+    "grunt-contrib-uglify":"*",
+    "grunt-contrib-jshint":"*",
+    "grunt-contrib-watch":"*"
   }
 }
