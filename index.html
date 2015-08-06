@@ -54,12 +54,10 @@
         <h3>Total poied: <span id="counter">0</span> POI!</h3>
         <a href="http://knowyourmeme.com/memes/poi-%E3%81%A3%E3%81%BD%E3%81%84"><b>FYI, POI!</b></a><br/><br/>
         <button id="twitter-tweet" class="btn btn-default btn-primary btn-lg"><i class="fa fa-twitter"></i> Tweet</button>
-
-        <!-- Start, Stop Bgm-->
       </div>
       <br/>
       <div class="text-center">
-        <button id="button-restartmusic" class="btn btn-info btn-lg">playagain</button>
+        <button id="button-restartmusic" class="btn btn-info btn-lg">Give me some POI music</button>
 
         <button id="button-stopmusic" class="btn btn-danger btn-lg">STOP THE FUCKING MUSIC!</button>
       </div>
@@ -72,20 +70,20 @@
   <div class="container">
     <p class="text-center">THIS POINTLESS POI IS MADE BY <a href="https://github.com/sancowinx"><b>THIS GUY</b></a>.
     <br/>
-    *Works on modern browser/smartphone except Internet Explorer
+    *Works on modern browser/smartphone except Internet Explorer. Safari will suffers some Audio lag.
     </p>
   </div>
 </footer>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-<script async src="assets/js/poi.js"></script>
+<script async src="assets/js/poi_v2.js"></script>
 <script>
-    (function(){
-      bgm = new Audio("assets/audio/poi-ost-trimmed.wav");
-        bgm.loop = true;
-        bgm.play();
-    })();
+  (function(){
+    bgm = new Audio("assets/audio/poi-ost-trimmed.wav");
+      bgm.loop = true;
+      bgm.play();
+  })();
 </script>
 </body>
 </html>
