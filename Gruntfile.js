@@ -30,6 +30,7 @@ module.exports = function (grunt) {
             }
         },
         jshint: {
+            files : 'assets/js/poi_module.js',
             options: {
                 node: true,
                 curly: true,
